@@ -3,7 +3,7 @@
 </script>
 
 <div style="padding-top: 20px">
-  <h1>Feed</h1>
+  <h1>Stores</h1>
 </div>
 
 {#each new Array(10) as item, id}

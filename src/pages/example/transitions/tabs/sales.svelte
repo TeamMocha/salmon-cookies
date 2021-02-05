@@ -10,5 +10,5 @@
 
 <main>
   <br />
-  <h1>Updates</h1>
+  <h1>Sales Info</h1>
 </main>
