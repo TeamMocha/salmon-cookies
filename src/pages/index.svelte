@@ -1,5 +1,5 @@
 <script>
-	export let name;
+  export let name;
 	export let thingWeSell;
 </script>
 
@@ -10,8 +10,8 @@
   </div>
 
   <div id="nav"> 
-    <a href="./sales.html">Daily Sales</a>
-    <a href="./stores.html">All Locations</a>
+    <a href="/sales/index.html">Daily Sales</a>
+    <a href="/stores/index.html">All Locations</a>
   </div>
 
   <div id="main">

@@ -5,7 +5,8 @@
   },
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "linebreak-style": "unix"
   },
   "plugins": [
     "svelte3",
