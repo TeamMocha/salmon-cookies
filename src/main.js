@@ -1,9 +1,11 @@
-import App from './App.svelte';
+import App from './App/App.svelte';
 
 const app = new App({
+	// Global Props
 	target: document.body,
 	props: {
-		name: 'world'
+		name: 'Pat',
+		thingWeSell: 'salmon cookies'
 	}
 });
 
