@@ -1,8 +1,9 @@
 <style>
   main {
-    background: #0bf5cc;
+    background: #17d5a2;
     height: 100%;
     overflow-y: auto;
+    text-align: center;
   }
   * :global(.card) {
     background: white;
@@ -11,6 +12,7 @@
     display: inline-block;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 24px;
+    text-align: center;
   }
 </style>
 
