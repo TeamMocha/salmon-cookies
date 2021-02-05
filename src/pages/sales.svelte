@@ -16,7 +16,39 @@
   <h1>Sales Info</h1>
 
   <section style="text-align: left;">
-    <pre>{JSON.stringify(stores, null, 4)}</pre>
+    {#each stores as store, i}
+    <!-- {@debug store} -->
+    <p><strong>Store: </strong>{ store.city }</p>
+    <p><strong>Customers (min/max): </strong>{store.minCust}/{store.maxCust}</p>
+    <p><strong>Avg. Cookies / Customer: </strong>{store.aveCookieSale}</p>
+    <p><strong>Hourly: </strong></p>
+    <table>
+      <tr style="font-weight: bold">
+        {#each hours as hour, i}
+        <td>{hour}</td>
+        {/each}
+      </tr>
+      <tr>
+        {#each store.cookiesEachHour as cookies, i}
+        <td>{cookies}</td>
+        {/each}
+      </tr>
+    </table>
+    <br />
+    {/each}
+
+    <!-- 
+    {#each stores as { city, minCust, maxCust, aveCookieSale, cookiesEachHour }, i}
+      <p>Store: { city }</p>
+      <p>Customers (min/max): {minCust}/{maxCust}</p>
+      <p>Avg. Cookies / Customer: {aveCookieSale}</p>
+      <p>Hourly: {cookiesEachHour}</p>
+      <br />
+    {/each}
+    -->
+
+
+    <!-- <pre>{JSON.stringify(stores, null, 4)}</pre> -->
     <table id="myTable"></table>
     <div id="storeSales"></div>
   </section>
@@ -49,6 +81,8 @@
 </main>
 
 <script>
+import { each } from "svelte/internal";
+
   var stores = [];
   // var storeInfo = document.getElementById('storeSales');
   
@@ -99,6 +133,7 @@
   Paris.render();
   Lima.render();
   stores = [Seattle, Tokyo, Dubai, Paris, Lima];
+
   console.log({stores});
 
   function createNewStore(event) {
