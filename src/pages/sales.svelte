@@ -29,6 +29,7 @@
         {/each}
       </tr>
       <tr>
+        <td>{store.city}</td>
         {#each store.cookiesEachHour as cookies, i}
         <td>{cookies}</td>
         {/each}
